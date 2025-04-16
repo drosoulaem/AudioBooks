@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+    <title> AUDIO BOOK </title>
+	<script type='text/javascript' src="./aframe.min.js"></script>
+</head>
+
+<body>
+    <a-scene>
+		<a-sky color=lightgray> </a-sky>
+		<a-entity light="type: ambient; color: white;"></a-entity>
+	    <a-plane rotation="-90 0 0" width="15" height="15" color="yellow"></a-plane>
+		
+		
+	<a-entity id="player" position="0 0 0" wasd-controls>
+      <a-camera id='mycamera'>
+       <a-cursor></a-cursor>
+      </a-camera>
+    </a-entity>
+	
+	</a-scene>
+</body>
+
+</html>
