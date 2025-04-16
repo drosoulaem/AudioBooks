@@ -7,21 +7,20 @@
 </head>
  
 <body>
-    <a-scene>
-		<a-sky color=lightgray> </a-sky>
-		<a-entity light="type: ambient; color: white;"></a-entity>
-	    <a-plane rotation="-90 0 0" width="15" height="15" color="yellow"></a-plane>
-		
-	  <a-gltf-model position="2 0 -2" src="./models/chair.gltf"></a-gltf-model>
+	<a-scene>
+	  <a-sky color="lightgray"></a-sky>
+	  <a-entity light="type: ambient; color: white;"></a-entity>
+	  <a-plane rotation="-90 0 0" width="15" height="15" color="yellow"></a-plane>
+  
+	  <a-gltf-model position="2 0 -2" src="./models/chair.gltf"></a-gltf-model>  
 	  <a-gltf-model position="10 0 -10" src="./models/desk.gltf"></a-gltf-model>
-		
-	<a-entity id="player" position="0 0 0" wasd-controls>
-      <a-camera id='mycamera'>
-       <a-cursor></a-cursor>
-      </a-camera>
-    </a-entity>
-	
+  
+	  <a-entity id="player" position="0 1.6 0" movement-controls>
+		<a-camera id="mycamera" wasd-controls look-controls>
+		  <a-cursor></a-cursor>
+		</a-camera>
+	  </a-entity>
 	</a-scene>
-</body>
+  </body>
 <!--hehe -->
 </html>
