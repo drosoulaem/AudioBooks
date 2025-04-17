@@ -7,14 +7,39 @@
 </head>
  
 <body>
-	<a-scene>
-	 <a-gltf-model position="0 0 0" scale="1 0.9 1"  src="./models/tchairblend.gltf"></a-gltf-model>
-	
-	
-	 <a-entity></a-entity>
-	  <a-sky color="lightgray"></a-sky>
-	  <a-entity light="type: ambient; color: white;"></a-entity>
-	  <a-plane rotation="-90 0 0" width="15" height="15" color="yellow"></a-plane>
+<a-scene>
+      <a-sky color="lightgray"></a-sky>
+
+      <!-- Lighting -->
+      <a-light type="ambient" color="white"></a-light>
+      <a-light type="directional" intensity="0.5" position="0 10 0"></a-light>
+   
+
+      <!-- Ground Plane (visible) -->
+	  <a-plane rotation="-90 0 0" width="20" height="17" color="goldenrod"></a-plane>
+	  
+	  <!-- Ceiling -->
+	  <a-plane position="0 5 0" rotation="90 0 0" width="20" height="17" color="gray"></a-plane>
+
+      <!-- Walls -->
+      <a-box position="-10 1 0" depth="20" height="5" width="0.2" color="lightgray"></a-box>
+      <a-box position="10 1 0" depth="20" height="5" width="0.2" color="lightgray"></a-box>
+      <a-box position="0 1 -10" width="20" height="5" depth="0.2" color="lightgray"></a-box>
+      <a-box position="0 1 10" width="20" height="5" depth="0.2" color="lightgray"></a-box>
+
+      <!-- Walls behind the walls to stop camera view-->
+      <a-box position="-10.5 1 0" depth="20" height="5" width="0.2" color="lightgray"></a-box>
+      <a-box position="10.5 1 0" depth="20" height="5" width="0.2" color="lightgray"></a-box>
+      <a-box position="0 1 10.5" width="20" height="5" depth="0.2" color="lightgray"></a-box>
+      <a-box position="0 1 10.5" width="20" height="5" depth="0.2" color="lightgray"></a-box>
+	  
+	    <!--teachers desk-->
+	  <a-obj-model position="6.565 1.48647 -4.49089" scale="0.6 0.5 0.6" rotation="0 -90 0"  src="./models/teachersdesk.obj" mtl="./models/teachersdesk.mtl"></a-obj-model>
+	  
+  <!--teachers chair-->
+      <a-obj-model position="8.003 0.95228 -4.19783" scale="0.45 0.35 0.4" rotation="0 135 0" src="./models/tchairblend.obj" mtl="./models/tchairblend.mtl"></a-obj-model>
+  
+
   <!--right side of desks-->
      <a-entity position='0 0 0'>
 	  <a-gltf-model position="3.66662 0.35 -2.67138" scale="1 0.9 1" rotation="0 -180 0" src="./models/school.gltf"></a-gltf-model>
@@ -52,13 +77,6 @@
 		<a-gltf-model position="2.15009 1.2 -3.53337" scale="0.1 0.1 0.1" rotation="0 -90 0" src="./models/chair.gltf" gltf-model="./models/chair.gltf"></a-gltf-model>  
 		<a-gltf-model position="2.15009 1.2 -1.81786" scale="0.1 0.1 0.1" rotation="0 -90 0" src="./models/chair.gltf" gltf-model="./models/chair.gltf"></a-gltf-model>  
 	   </a-entity>
-  
-	    <a-entity id="player" position="0 0.7 0" movement-controls>
-		<a-camera id="mycamera" wasd-controls look-controls>
-		  <a-cursor></a-cursor>
-		</a-camera>
-	  </a-entity>
-	</a-scene>
   </body>
 <!--hehe -->
 <!--stupid aframe aaaaaa-->
