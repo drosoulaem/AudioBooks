@@ -77,7 +77,14 @@
 		<a-gltf-model position="2.15009 1.2 -3.53337" scale="0.1 0.1 0.1" rotation="0 -90 0" src="./models/chair.gltf" gltf-model="./models/chair.gltf"></a-gltf-model>  
 		<a-gltf-model position="2.15009 1.2 -1.81786" scale="0.1 0.1 0.1" rotation="0 -90 0" src="./models/chair.gltf" gltf-model="./models/chair.gltf"></a-gltf-model>  
 	   </a-entity>
-  </body>
+	   
+	  <!-- Player -->
+         <a-entity id="player" position="0 0.6 0" movement-controls>
+         <a-camera id="mycamera" wasd-controls look-controls="pointerLockEnabled: true;">  >
+           <a-cursor></a-cursor>
+         </a-camera>
+	</a-scene>	 
+ </body>
 <!--hehe -->
 <!--stupid aframe aaaaaa-->
 </html>
