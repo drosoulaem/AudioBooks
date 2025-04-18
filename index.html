@@ -4,47 +4,88 @@
 <meta charset="UTF-8">
     <title> AUDIO BOOK </title>
 	<script type='text/javascript' src="./aframe.min.js"></script>
+    <link rel='icon' href='./myfavicon.ico'>
+	
+	    <!-- style for the UI -->
+  	 <style>
+        #overlay {
+            position: absolute;
+            top: 10%; 
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 24px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 5px;
+            display: none; 
+			z-index: 9999;
+        }
+    </style>
 </head>
  
 <body>
+    <!-- UI -->
+    <div id="overlay"> </div>
+	
 <a-scene>
+	  <a-assets>
+		<audio id="sound-1" src="./sounds/megalovania.mp3"></audio>
+		<audio id="sound-2" src="./sounds/katerellos.mp3"></audio>
+	  </a-assets>
+	  
+	  
       <a-sky color="lightgray"></a-sky>
 
-      <!-- Lighting -->
+  <!-- Lighting -->
       <a-light type="ambient" color="white"></a-light>
       <a-light type="directional" intensity="0.5" position="0 10 0"></a-light>
    
 
-      <!-- Ground Plane (visible) -->
+  <!-- Ground Plane (visible) -->
 	  <a-plane rotation="-90 0 0" width="20" height="17" color="goldenrod"></a-plane>
 	  
-	  <!-- Ceiling -->
+  <!-- Ceiling -->
 	  <a-plane position="0 5 0" rotation="90 0 0" width="20" height="17" color="gray"></a-plane>
 
-      <!-- Walls -->
+  <!-- Walls -->
       <a-box position="-10 1 0" depth="20" height="5" width="0.2" color="lightgray"></a-box>
       <a-box position="10 1 0" depth="20" height="5" width="0.2" color="lightgray"></a-box>
       <a-box position="0 1 -10" width="20" height="5" depth="0.2" color="lightgray"></a-box>
       <a-box position="0 1 10" width="20" height="5" depth="0.2" color="lightgray"></a-box>
 
-      <!-- Walls behind the walls to stop camera view-->
+  <!-- Walls behind the walls to stop camera view-->
       <a-box position="-10.5 1 0" depth="20" height="5" width="0.2" color="lightgray"></a-box>
       <a-box position="10.5 1 0" depth="20" height="5" width="0.2" color="lightgray"></a-box>
       <a-box position="0 1 10.5" width="20" height="5" depth="0.2" color="lightgray"></a-box>
       <a-box position="0 1 10.5" width="20" height="5" depth="0.2" color="lightgray"></a-box>
 	  
-	    <!--teachers desk-->
+  <!--teachers desk-->
 	  <a-obj-model position="6.565 1.48647 -4.49089" scale="0.6 0.5 0.6" rotation="0 -90 0"  src="./models/teachersdesk.obj" mtl="./models/teachersdesk.mtl"></a-obj-model>
 	  
   <!--teachers chair-->
       <a-obj-model position="8.003 0.95228 -4.19783" scale="0.45 0.35 0.4" rotation="0 135 0" src="./models/tchairblend.obj" mtl="./models/tchairblend.mtl"></a-obj-model>
   
+  	   
+  <!-- bookshelf -->
+	  <a-obj-model position="-9.80301 1.55725 0" scale="0.6 0.7 0.9" rotation="0 0 0" src="./models/bookcase.obj" material="repeat: 25 1; src:./models/wood.png"></a-obj-model>
+
 
   <!--right side of desks-->
      <a-entity position='0 0 0'>
 	  <a-gltf-model position="3.66662 0.35 -2.67138" scale="1 0.9 1" rotation="0 -180 0" src="./models/school.gltf"></a-gltf-model>
 	  <a-gltf-model position="2.15009 1.2 -3.53337" scale="0.1 0.1 0.1" rotation="0 -90 0" src="./models/chair.gltf"></a-gltf-model>  
-	  <a-gltf-model position="2.15009 1.2 -1.81786" scale="0.1 0.1 0.1" rotation="0 -90 0" src="./models/chair.gltf"></a-gltf-model>  
+	  <a-gltf-model position="2.15009 1.2 -1.81786" scale="0.1 0.1 0.1" rotation="0 -90 0" src="./models/chair.gltf"></a-gltf-model> 
+	  
+	  <a-box id="mybox1" class="clickable" color=red position="3.81501 1.5257 -3.37269" scale="0.5 0.5 0.5"> 
+	   <a-sound src="#sound-1"></a-sound>  
+	   <a-text color=black style="font-weight: bold;" position="-0.5 1 0" value="ARTWORK 1" visible="false">  </a-text>
+	  </a-box>
+	  
+	  <a-box id="mybox2" class="clickable" color=blue position="3.81501 1.5257 -1.74903" scale="0.5 0.5 0.5"> 
+	   <a-sound src="#sound-2"></a-sound> 
+	   <a-text color=black style="font-weight: bold;" position="-0.5 1 0" value="ARTWORK 2" visible="false"> </a-text>
+	  </a-box>	  
 	 </a-entity>
 
 	 <a-entity position='-4.4 0 0'>
@@ -77,13 +118,95 @@
 		<a-gltf-model position="2.15009 1.2 -3.53337" scale="0.1 0.1 0.1" rotation="0 -90 0" src="./models/chair.gltf" gltf-model="./models/chair.gltf"></a-gltf-model>  
 		<a-gltf-model position="2.15009 1.2 -1.81786" scale="0.1 0.1 0.1" rotation="0 -90 0" src="./models/chair.gltf" gltf-model="./models/chair.gltf"></a-gltf-model>  
 	   </a-entity>
-	   
+
+
 	  <!-- Player -->
-         <a-entity id="player" position="0 0.6 0" movement-controls>
-         <a-camera id="mycamera" wasd-controls look-controls="pointerLockEnabled: true;">  >
-           <a-cursor></a-cursor>
-         </a-camera>
-	</a-scene>	 
+      <a-entity id="rig" movement-controls position="0 0 0">
+        <a-entity id="camera"
+                  camera
+				  wasd-controls
+                  position="0 1.6 0"
+                  look-controls="pointerLockEnabled: true">
+           <a-cursor fuse="false" raycaster="objects: .clickable"></a-cursor>
+        </a-entity>
+      </a-entity>
+	  
+	 </a-scene>	 
+	 
+	 <script>
+	var Thebooks = [];
+	for (var i = 1; i <= 2; i++) 
+	 {
+	  Thebooks[i] = document.getElementById('mybox' + i);
+	 }
+</script>
+
+<script>
+   var currentlyPlayingSound = null;
+   var currentlyVisibleText = null;
+   var currentlyVisibleArrow = null;
+    
+   for (var i = 1; i <= 2; i++) 
+   {
+    if (Thebooks[i]) 
+	{
+      Thebooks[i].addEventListener('click', function () {
+        
+	 // message to see what was clicked
+	  console.log('You clicked: ' + this.id);
+		
+     // Stop any currently playing sound
+      if (currentlyPlayingSound && currentlyPlayingSound.components.sound.isPlaying) 
+	  {
+        currentlyPlayingSound.components.sound.stopSound();
+      }
+
+     // Hide any visible text
+      if (currentlyVisibleText) 
+	  {
+        currentlyVisibleText.setAttribute('visible', false);
+      }
+	  
+	 // Hide any visible arrow
+      if (currentlyVisibleArrow) 
+	  {
+        currentlyVisibleArrow.setAttribute('visible', false); 
+      }
+
+     // Play sound when clicked
+      var sound = this.querySelector('a-sound');
+      if (sound) 
+	  {
+        sound.components.sound.playSound();
+        currentlyPlayingSound = sound; // current sound 
+      }
+		
+     // Show text when clicked
+	  var text = this.querySelector('a-text');
+	  if (text) 
+	  {
+		text.setAttribute('visible', false); // text remain hidden because i changed my mind 
+        currentlyVisibleText = text; // current text that is visible
+	  }
+		
+	// Create and show the arrow above the clicked box
+        var arrow = document.createElement('a-entity');
+        arrow.setAttribute('geometry', {primitive: 'cone', radiusBottom: 0.3, height: 0.6});
+        arrow.setAttribute('material', {color: 'lime'});
+        arrow.setAttribute('position', {x: text.object3D.position.x + 0.5, y: text.object3D.position.y + 0.4, z: text.object3D.position.z});
+        arrow.setAttribute('rotation', {x: 180, y: 0, z: 0}); // Rotate arrow to point downwards
+        this.appendChild(arrow);
+	    currentlyVisibleArrow = arrow; // current arrow that is visible
+
+     // Show the UI with the message from the selected text 
+      var overlay = document.getElementById('overlay');
+      overlay.style.display = 'block'; // Show the UI
+      overlay.textContent = "Playing: " + text.getAttribute('value'); 
+		
+     });
+    }
+   }
+</script>
  </body>
 <!--hehe -->
 <!--stupid aframe aaaaaa-->
