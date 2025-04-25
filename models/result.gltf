@@ -1,10 +1,9 @@
 {
     "asset": {
         "version": "2.0",
-        "generator": "Open Asset Import Library (assimp v5.4.0)"
+        "generator": "Open Asset Import Library (assimp v5.2.cf7d3637)"
     },
     "extensionsUsed": [
-        "KHR_materials_specular",
         "KHR_materials_volume",
         "FB_ngon_encoding"
     ],
@@ -13,16 +12,16 @@
             "bufferView": 0,
             "byteOffset": 0,
             "componentType": 5126,
-            "count": 502,
+            "count": 1242,
             "type": "VEC3",
             "max": [
                 92.96478271484375,
-                19.221817016601563,
+                19.221817016601564,
                 62.97564697265625
             ],
             "min": [
                 -92.96642303466797,
-                -19.221817016601563,
+                -19.221817016601564,
                 -73.73126220703125
             ]
         },
@@ -30,7 +29,7 @@
             "bufferView": 1,
             "byteOffset": 0,
             "componentType": 5126,
-            "count": 502,
+            "count": 1242,
             "type": "VEC3",
             "max": [
                 1.0,
@@ -47,7 +46,7 @@
             "bufferView": 2,
             "byteOffset": 0,
             "componentType": 5126,
-            "count": 502,
+            "count": 1242,
             "type": "VEC2",
             "max": [
                 1.0,
@@ -62,10 +61,10 @@
             "bufferView": 3,
             "byteOffset": 0,
             "componentType": 5125,
-            "count": 1302,
+            "count": 1242,
             "type": "SCALAR",
             "max": [
-                501
+                1241
             ],
             "min": [
                 0
@@ -75,7 +74,7 @@
             "bufferView": 4,
             "byteOffset": 0,
             "componentType": 5126,
-            "count": 144,
+            "count": 216,
             "type": "VEC3",
             "max": [
                 87.6885986328125,
@@ -85,14 +84,14 @@
             "min": [
                 -87.62146759033203,
                 -11.522758483886719,
-                -62.975650787353516
+                -62.975650787353519
             ]
         },
         {
             "bufferView": 5,
             "byteOffset": 0,
             "componentType": 5126,
-            "count": 144,
+            "count": 216,
             "type": "VEC3",
             "max": [
                 0.9999626874923706,
@@ -102,14 +101,14 @@
             "min": [
                 -1.0,
                 -0.4190426170825958,
-                -7.700466397864147e-8
+                -7.700466397864148e-8
             ]
         },
         {
             "bufferView": 6,
             "byteOffset": 0,
             "componentType": 5126,
-            "count": 144,
+            "count": 216,
             "type": "VEC2",
             "max": [
                 1.0,
@@ -117,7 +116,7 @@
             ],
             "min": [
                 0.0,
-                0.41073107719421387
+                0.41073107719421389
             ]
         },
         {
@@ -127,7 +126,7 @@
             "count": 216,
             "type": "SCALAR",
             "max": [
-                143
+                215
             ],
             "min": [
                 0
@@ -137,24 +136,24 @@
             "bufferView": 8,
             "byteOffset": 0,
             "componentType": 5126,
-            "count": 4,
+            "count": 6,
             "type": "VEC3",
             "max": [
                 87.38257598876953,
-                19.221817016601563,
+                19.221817016601564,
                 62.97564697265625
             ],
             "min": [
                 -87.38421630859375,
-                19.221817016601563,
-                -62.975650787353516
+                19.221817016601564,
+                -62.975650787353519
             ]
         },
         {
             "bufferView": 9,
             "byteOffset": 0,
             "componentType": 5126,
-            "count": 4,
+            "count": 6,
             "type": "VEC3",
             "max": [
                 0.0,
@@ -171,7 +170,7 @@
             "bufferView": 10,
             "byteOffset": 0,
             "componentType": 5126,
-            "count": 4,
+            "count": 6,
             "type": "VEC2",
             "max": [
                 1.0,
@@ -179,7 +178,7 @@
             ],
             "min": [
                 0.0,
-                0.025350213050842285
+                0.025350213050842286
             ]
         },
         {
@@ -189,7 +188,7 @@
             "count": 6,
             "type": "SCALAR",
             "max": [
-                3
+                5
             ],
             "min": [
                 0
@@ -198,80 +197,80 @@
     ],
     "buffers": [
         {
-            "byteLength": 26896,
-            "uri": "9e2e918d-2dc0-4c5d-b2e6-2d8eda62cf09.bin"
+            "byteLength": 52704,
+            "uri": "result.bin"
         }
     ],
     "bufferViews": [
         {
             "buffer": 0,
             "byteOffset": 0,
-            "byteLength": 6024,
+            "byteLength": 14904,
             "target": 34962
         },
         {
             "buffer": 0,
-            "byteOffset": 6024,
-            "byteLength": 6024,
+            "byteOffset": 14904,
+            "byteLength": 14904,
             "target": 34962
         },
         {
             "buffer": 0,
-            "byteOffset": 12048,
-            "byteLength": 4016,
+            "byteOffset": 29808,
+            "byteLength": 9936,
             "target": 34962
         },
         {
             "buffer": 0,
-            "byteOffset": 16064,
-            "byteLength": 5208,
+            "byteOffset": 39744,
+            "byteLength": 4968,
             "target": 34963
         },
         {
             "buffer": 0,
-            "byteOffset": 21272,
+            "byteOffset": 44712,
+            "byteLength": 2592,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 47304,
+            "byteLength": 2592,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 49896,
             "byteLength": 1728,
             "target": 34962
         },
         {
             "buffer": 0,
-            "byteOffset": 23000,
-            "byteLength": 1728,
-            "target": 34962
-        },
-        {
-            "buffer": 0,
-            "byteOffset": 24728,
-            "byteLength": 1152,
-            "target": 34962
-        },
-        {
-            "buffer": 0,
-            "byteOffset": 25880,
+            "byteOffset": 51624,
             "byteLength": 864,
             "target": 34963
         },
         {
             "buffer": 0,
-            "byteOffset": 26744,
+            "byteOffset": 52488,
+            "byteLength": 72,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 52560,
+            "byteLength": 72,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 52632,
             "byteLength": 48,
             "target": 34962
         },
         {
             "buffer": 0,
-            "byteOffset": 26792,
-            "byteLength": 48,
-            "target": 34962
-        },
-        {
-            "buffer": 0,
-            "byteOffset": 26840,
-            "byteLength": 32,
-            "target": 34962
-        },
-        {
-            "buffer": 0,
-            "byteOffset": 26872,
+            "byteOffset": 52680,
             "byteLength": 24,
             "target": 34963
         }
@@ -301,16 +300,6 @@
                 ],
                 "metallicFactor": 0.0,
                 "roughnessFactor": 0.5
-            },
-            "extensions": {
-                "KHR_materials_specular": {
-                    "specularFactor": 1.0,
-                    "specularColorFactor": [
-                        0.800000011920929,
-                        0.800000011920929,
-                        0.800000011920929
-                    ]
-                }
             }
         },
         {
@@ -323,16 +312,6 @@
                     1.0
                 ],
                 "metallicFactor": 0.0
-            },
-            "extensions": {
-                "KHR_materials_specular": {
-                    "specularFactor": 1.0,
-                    "specularColorFactor": [
-                        0.800000011920929,
-                        0.800000011920929,
-                        0.800000011920929
-                    ]
-                }
             }
         },
         {
@@ -349,16 +328,6 @@
                 ],
                 "metallicFactor": 0.0,
                 "roughnessFactor": 0.5
-            },
-            "extensions": {
-                "KHR_materials_specular": {
-                    "specularFactor": 1.0,
-                    "specularColorFactor": [
-                        0.800000011920929,
-                        0.800000011920929,
-                        0.800000011920929
-                    ]
-                }
             }
         }
     ],
@@ -431,7 +400,7 @@
                 1.0,
                 0.0,
                 6.273898601531982,
-                0.30141735076904297,
+                0.30141735076904299,
                 0.0,
                 1.0
             ],
